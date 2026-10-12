@@ -1,25 +1,137 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+    
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu primeiro site</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meu portfólio de desenvolvimento web.">
+  <title>João Vitor | Desenvolvedor em formação</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+    
 <body>
-    <main class="container">
-        <h1>Olá, mundo! 👋</h1>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="Voltar ao início">JV<span>.</span></a>
 
-        <p>
-            Estou começando minha jornada
-            no desenvolvimento web.
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar tema claro">
+      <span id="theme-icon" aria-hidden="true">☀️</span>
+      <span class="theme-label">Tema</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Aprendendo e criando na web</p>
+        <h1>Olá, eu sou <span class="gradient-text">João Vitor.</span></h1>
+        <h2>Sou <span id="typed-text"></span><span class="cursor" aria-hidden="true">|</span></h2>
+        <p class="hero-description">
+          Estou começando minha jornada no desenvolvimento web, criando projetos
+          e aprendendo algo novo a cada linha de código.
         </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">Ver projetos <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="#sobre">Conhecer mais</a>
+        </div>
+      </div>
 
-        <button id="botao">Clique aqui</button>
+      <div class="hero-art reveal" aria-label="Ilustração decorativa de código">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="code-card">
+          <div class="code-card-top"><span></span><span></span><span></span><small>meu-projeto.js</small></div>
+          <pre><code><span class="code-purple">const</span> objetivo = {
+  aprender: <span class="code-blue">"JavaScript"</span>,
+  praticar: <span class="code-blue">true</span>,
+  nuncaDesistir: <span class="code-green">true</span>
+};
 
-        <p id="mensagem"></p>
-    </main>
+<span class="code-purple">function</span> <span class="code-yellow">evoluir</span>() {
+  <span class="code-purple">return</span> <span class="code-blue">"um passo por vez"</span>;
+}</code></pre>
+        </div>
+        <div class="floating-badge badge-html">HTML</div>
+        <div class="floating-badge badge-css">CSS</div>
+        <div class="floating-badge badge-js">JS</div>
+      </div>
+    </section>
+
+    <section class="section about-section reveal" id="sobre">
+      <div class="section-heading">
+        <p class="eyebrow">UM POUCO SOBRE MIM</p>
+        <h2>Construindo meu <span class="gradient-text">caminho.</span></h2>
+      </div>
+      <p class="section-copy">
+        Já comecei a explorar HTML e CSS e agora estou aprendendo JavaScript.
+        Meu objetivo é transformar ideias em páginas úteis, bonitas e fáceis de usar.
+      </p>
+      <div class="skills">
+        <div class="skill"><span class="skill-icon html-icon">5</span><div><strong>HTML</strong><small>Estrutura das páginas</small></div></div>
+        <div class="skill"><span class="skill-icon css-icon">✳</span><div><strong>CSS</strong><small>Estilo e responsividade</small></div></div>
+        <div class="skill"><span class="skill-icon js-icon">JS</span><div><strong>JavaScript</strong><small>Interatividade</small></div></div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projetos">
+      <div class="section-heading reveal">
+        <p class="eyebrow">O QUE ESTOU CRIANDO</p>
+        <h2>Meus <span class="gradient-text">projetos.</span></h2>
+        <p class="section-copy">Estes são exemplos iniciais. Substitua-os pelos seus projetos reais conforme for criando.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-visual visual-one"><span class="visual-symbol">⌘</span><span class="visual-label">01 / WEB</span></div>
+          <div class="project-body">
+            <p class="project-type">HTML · CSS</p>
+            <h3>Meu primeiro site</h3>
+            <p>Uma página pessoal para praticar estrutura, cores, espaçamento e layout.</p>
+            <a class="project-link" href="#inicio">Ver página <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual visual-two"><span class="visual-symbol">✦</span><span class="visual-label">02 / IDEIA</span></div>
+          <div class="project-body">
+            <p class="project-type">JAVASCRIPT</p>
+            <h3>Projeto em construção</h3>
+            <p>Um espaço reservado para seu próximo projeto com lógica e interatividade.</p>
+            <a class="project-link" href="#contato">Saiba mais <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual visual-three"><span class="visual-symbol">◈</span><span class="visual-label">03 / FUTURO</span></div>
+          <div class="project-body">
+            <p class="project-type">EM APRENDIZADO</p>
+            <h3>Próxima ideia</h3>
+            <p>Novos projetos serão adicionados aqui conforme eu praticar e evoluir.</p>
+            <a class="project-link" href="#sobre">Ver tecnologias <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section reveal" id="contato">
+      <p class="eyebrow">VAMOS CONVERSAR</p>
+      <h2>Todo projeto começa <span class="gradient-text">com uma ideia.</span></h2>
+      <p class="section-copy">Este portfólio está em desenvolvimento. Em breve, adicionarei aqui meus links profissionais.</p>
+      <a class="button button-primary" href="#inicio">Voltar ao topo ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="#inicio">JV<span>.</span></a>
+    <p>Feito com HTML, CSS e JavaScript.</p>
+    <p>© <span id="year"></span> João Vitor</p>
+  </footer>
+    
 </body>
 </html>
